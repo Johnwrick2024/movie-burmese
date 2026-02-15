@@ -1,6 +1,5 @@
-services: 
-  - type: web         
-  ame: movie-burmese    
-  env: python    
-  buildCommand: pip install -r requirements.txt    
-  startCommand: gunicorn app:app    
+services:
+  -type: web 
+  name: movie-burmese 
+  env: python buildCommand: pip install -r requirements.txt 
+  startCommand: gunicorn app:app
