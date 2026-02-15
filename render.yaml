@@ -2,5 +2,6 @@ services:
   -type: web 
   name: movie-burmese 
   env: python 
+  plan: free
   buildCommand: pip install -r requirements.txt 
   startCommand: gunicorn app:app
