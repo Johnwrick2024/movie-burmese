@@ -1,16 +1,20 @@
 from flask import Flask, request, jsonify 
 from youtube_transcript_api import YouTubeTranscriptApi 
 from deep_translator import GoogleTranslator 
-import re app = Flask(__name__) 
+import re 
+
+app = Flask(__name__) 
+
 def extract_video_id(url): 
-  match = re.search(r"(?:v=|\/shorts\/)([a-zA-Z0-9_-]+)", url) 
-  if match: 
-    return match.group(1) 
-  else: 
+    match = re.search(r"(?:v=|\/shorts\/)([a-zA-Z0-9_-]+)", url) 
+    if match: 
+        return match.group(1) 
     return None 
+  
 @app.route("/") 
 def home(): 
     return "API running" 
+  
 @app.route("/generate", methods=["POST"]) 
 def generate(): 
     data = request.get_json() 
