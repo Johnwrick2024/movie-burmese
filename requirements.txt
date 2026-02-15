@@ -1,3 +1,4 @@
-flask youtube-transcript-api 
-deep-translator 
+flask
+youtube-transcript-api
+deep-translator
 gunicorn
